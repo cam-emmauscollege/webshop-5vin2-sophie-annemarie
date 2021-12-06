@@ -27,8 +27,8 @@ app.use(express.static('../web'))
 // definieer startpunten voor de API-server
 app.get('/api/echo', echoRequest)
 app.get('/api/categories', getCategories)
-app.get('/api/products', getProducts)
-app.get('/api/products/:id', getProductById)
+app.get('/api/boeken', getBoeken)
+app.get('/api/boeken/:id', getBoekenById)
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
 // app.post('/api/products', createProduct)
@@ -57,37 +57,37 @@ function echoRequest(request, response) {
 function getCategories(request, response) {
   console.log('API ontvangt /api/categories/')
   // TODO: change query to make it return categories
-  const sqlOpdracht = db.prepare('SELECT * FROM products ORDER BY id ASC')
+  const sqlOpdracht = db.prepare('SELECT * FROM boeken ORDER BY id ASC')
   const data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
   console.log('API verstuurt /api/categories/')
 }
 
-function getProducts(request, response) {
-  console.log('API ontvangt /api/products/?', request.query)
+function getBoeken(request, response) {
+  console.log('API ontvangt /api/boeken/?', request.query)
 
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT * FROM products WHERE category_id = ? ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT * FROM boeken WHERE category_id = ? ORDER BY name ASC')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT * FROM products ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT * FROM boeken ORDER BY name ASC')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
-  console.log('API verstuurt /api/products/')
+  console.log('API verstuurt /api/boeken/')
 }
 
 function getProductById(request, response) {
-  console.log('API ontvangt /api/products/:id/?', request.query)
+  console.log('API ontvangt /api/boeken/:id/?', request.query)
 
   let data = []
-  const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
-  data = sqlOpdracht.all(product_id)
+  const boeken_id = parseInt(request.params.id)
+  const sqlOpdracht = db.prepare('SELECT * FROM boeken WHERE id = ?')
+  data = sqlOpdracht.all(boeken_id)
   response.status(200).json(data[0])
 }
 
@@ -186,7 +186,7 @@ function checkoutOrder(request, response) {
   articleTable += "<tr><th>Id</th><th>Code</th><th>Naam</th><th>Prijs per stuk</th><th>Aantal</th><th>Aantal * prijs</th></tr>"
   for (let i in productIds) { // herhaal voor elke index van productIds[]
     let id = productIds[i]
-    const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
+    const sqlOpdracht = db.prepare('SELECT * FROM boeken WHERE id = ?')
     row = sqlOpdracht.get(id)
     let aantalMaalPrijs = productAmounts[i] * row.price
     articleTable += `<tr><td>${row.id}<tr><td>${row.code}</td><td>${row.name}</td><td>€ ${row.price.toFixed(2)}</td><td>${productAmounts[i]}</td><td>€ ${aantalMaalPrijs}</td></tr>`

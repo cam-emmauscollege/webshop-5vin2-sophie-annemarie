@@ -81,7 +81,7 @@ function getBoeken(request, response) {
   console.log('API verstuurt /api/boeken/')
 }
 
-function getProductById(request, response) {
+function getBoekenById(request, response) {
   console.log('API ontvangt /api/boeken/:id/?', request.query)
 
   let data = []

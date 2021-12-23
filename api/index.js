@@ -27,8 +27,8 @@ app.use(express.static('../web'))
 // definieer startpunten voor de API-server
 app.get('/api/echo', echoRequest)
 app.get('/api/categories', getCategories)
-app.get('/api/boeken', getBoeken)
-app.get('/api/boeken/:id', getBoekenById)
+app.get('/api/boeken', getProducts)
+app.get('/api/boeken/:id', getProductsById)
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
 // app.post('/api/products', createProduct)
@@ -64,7 +64,7 @@ function getCategories(request, response) {
   console.log('API verstuurt /api/categories/')
 }
 
-function getBoeken(request, response) {
+function getProducts(request, response) {
   console.log('API ontvangt /api/boeken/?', request.query)
 
   const category_id = parseInt(request.query.category)
@@ -81,13 +81,13 @@ function getBoeken(request, response) {
   console.log('API verstuurt /api/boeken/')
 }
 
-function getBoekenById(request, response) {
+function getProductsById(request, response) {
   console.log('API ontvangt /api/boeken/:id/?', request.query)
 
   let data = []
-  const boeken_id = parseInt(request.params.id)
+  const products_id = parseInt(request.params.id)
   const sqlOpdracht = db.prepare('SELECT * FROM boeken WHERE id = ?')
-  data = sqlOpdracht.all(boeken_id)
+  data = sqlOpdracht.all(products_id)
   response.status(200).json(data[0])
 }
 

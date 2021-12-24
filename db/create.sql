@@ -28,3 +28,4 @@ insert into products (name, description, code, aantal_blz, price) values ('Scarl
 insert into products (name, description, code, aantal_blz, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 400, 13.5);
 insert into products (name, description, code, aantal_blz, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 300, 14);
 insert into products (name, description, code, aantal_blz, price) values ('Velvet Goldmine', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 200, 14);
+insert into products (name, description, code, aantal_blz, price) values ('boek 2', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', '816905633-0', 200, 10.5);

@@ -24,7 +24,7 @@ footer {
 
 .card {
   width:200px; 
-  height: 720px; 
+  height: 740px; 
   margin-bottom: 20px
 }
 
@@ -47,6 +47,7 @@ footer {
 .product img {
   margin: auto;
   margin-top: 20px;
+  
 }
 
 .product > .card-header {

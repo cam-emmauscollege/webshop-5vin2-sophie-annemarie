@@ -10,7 +10,7 @@ of in Gitpod (gitpod is zonder mailen van orders en zonder permanent hosten):
 - Boeken
 ### Deze webshop is gemaakt door: 
 - Sophie Kuo
-- Annemarie Baars
+- Anne-Marie Baart
 
 # Mijn aanpak
 Werk de planning af van boven naar beneden<br>

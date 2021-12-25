@@ -27,7 +27,7 @@ insert into products (name, description, code, aantal_blz, price) values ('Harry
 Op een dag arriveert er een geheimzinnige brief voor hem. En daarna nog een, en nog een. De brieven veranderen Harrys hele leven: hij wordt gered door een woest figuur op een vliegende motorfiets en hij komt erachter wie zijn ouders werkelijk waren.
 Met een speciale trein die vertrekt van Perron 9¾ belandt hij op Zweinsteins Hogeschool voor Hekserij en Hocus Pocus, waar hij alles leert over bezemstelen, toverdranken en monsters.
 En uiteindelijk moet Harry het opnemen tegen zijn aartsvijand Voldemort, een levensgevaarlijke tovenaar.', '077030122-3', 228, 11);
-insert into products (name, description, code, aantal_blz, price) values ('De Kleine Prins', 'Een piloot maakt een noodlanding in de woestijn. Daar ontmoet hij een kleine prins. De prins vertelt wijze en betoverende verhalen over de planeet waar hij woont met een hooghartige bloem en over zijn reizen naar andere planeten.', '445924201-X', 96, 13.5);
+insert into products (name, description, code, aantal_blz, price) values ('Le Petit Prince', 'Een piloot maakt een noodlanding in de woestijn. Daar ontmoet hij een kleine prins. De prins vertelt wijze en betoverende verhalen over de planeet waar hij woont met een hooghartige bloem en over zijn reizen naar andere planeten.', '445924201-X', 96, 13.5);
 insert into products (name, description, code, aantal_blz, price) values ('De Droom Van De Rode Kamer', 'De droom van de rode kamer wordt gerekend tot de hoogtepunten van de klassieke Chinese literatuur, het summum van de Chinese romankunst. In tweeduizend bladzijden toont Cao Xueqin de rijkdom van de achttiende-eeuwse adel, die leeft achter rode muren en met behulp van broze banden met de keizer probeert vast te houden aan zijn macht. Maar is die rijkdom misschien uiteindelijk toch niet een illusie?
 Tot dit boeddhistisch-taoïstische inzicht komt de jonge Baoyu: geboren met een stuk bezielde jade in zijn mond, een steen van mythische oorsprong. Zijn liefdesleven vormt de rode draad van het grote familieverhaal. In een fameuze driehoeksverhouding met twee nichtjes leert hij het verschil kennen tussen liefde en huwelijk. Ontnuchterd denkt hij er steeds vaker aan het aardse leven op te geven en als bedelmonnik verder te gaan.', '693155505-7', 2000, 13.5);
 insert into products (name, description, code, aantal_blz, price) values ('De Leeuw, De Heks En De Kleerkast', 'Vier Londense kinderen komen via een oude, betoverde kleerkast in het fantasieland Narnia. Daar wonen een faun, de gemene dwerg, de boze Witte Heks en de leeuw Aslan.', '686928463-6', 158, 14);
@@ -46,7 +46,17 @@ CREATE TABLE talen (
   taal TEXT
 );
 
+insert into talen (taal) values ('Nederlands');
+insert into talen (taal) values ('Frans');
 
+DROP TABLE IF EXISTS kaften;
+CREATE TABLE kaften (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kaft TEXT
+);
+
+insert into kaften (kaft) values ('Paperback');
+insert into kaften (kaft) values ('Hardcover');
 
 DROP TABLE IF EXISTS schrijvers; 
 CREATE TABLE schrijvers (

@@ -57,7 +57,7 @@ function echoRequest(request, response) {
 function getCategories(request, response) {
   console.log('API ontvangt /api/categories/')
   // TODO: change query to make it return categories
-  const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.prijs, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft FROM products  JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id ORDER BY name ASC')
+  const sqlOpdracht = db.prepare('SELECT * FROM products ORDER BY name ASC')
   const data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
@@ -70,10 +70,10 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.prijs, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id = products.kaft WHERE category_id = ? ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.price, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id = products.kaft WHERE category_id = ? ORDER BY name ASC')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.prijs, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.price, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id ORDER BY name ASC')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))

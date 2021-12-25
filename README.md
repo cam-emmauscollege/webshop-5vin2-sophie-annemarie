@@ -22,10 +22,10 @@ Stap 1: Start
 - [x] Pas de query aan zodat getoonde producten gesorteerd worden op naam (zie mapje api)
 
 Stap 2: Database opzetten 
-- [ ] Maak tabellen en velden (CREATE TABLE commando) in je database waarin alle informatie kan worden opgeslagen die je over je producten wilt tonen.<br>
+- [x] Maak tabellen en velden (CREATE TABLE commando) in je database waarin alle informatie kan worden opgeslagen die je over je producten wilt tonen.<br>
 Tip: je kunt een multipliciteitendiagram gebruiken als tussenstap voor je database-ontwerp
-- [ ] Vul de tabellen met informatie (INSERT commando)
-- [ ] Voeg eventueel plaatjes toe (web/images map)
+- [x] Vul de tabellen met informatie (INSERT commando)
+- [x] Voeg eventueel plaatjes toe (web/images map)
 
 Stap 3: API aanpassen 
 - [ ] Pas de API aan, zodat je alle informatie uit je database kunt opvragen via de API

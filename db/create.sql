@@ -39,3 +39,9 @@ insert into products (name, description, code, aantal_blz, price) values ('Harry
 insert into products (name, description, code, aantal_blz, price) values ('Harry Potter En De Orde Van De Feniks', 'Harry Potter staat op het punt om te beginnen aan zijn vijfde schooljaar op de Hogeschool voor Hekserij en Hocus Pocus. Harry kan haast niet wachten en bovendien wil hij weten waarom zijn vrienden Ron en Hermelien de hele zomer zo geheimzinnig hebben gedaan. Maar wat Harry zal gaan ontdekken in zijn nieuwe schooljaar zal zijn wereld op zijn kop zetten...', '816905633-0', 668, 10.5);
 insert into products (name, description, code, aantal_blz, price) values ('Harry Potter En De Halfbloed Prins', 'Het land wordt geteistered door vreemde rampen en aanslagen, en hoewel het hartje zomer is hangt er een hardnekkige, onhellspellende mist. In de Ligusterlaan zit Harry Potter laat op de avond ongeduldig op de komst van professor Perkamentus te wachten. Wat kan er zo belangrijk zijn dat Perkamentus hem bij de Duffelingen op komt zoeken en dat niet wachten kan tot Harrys terugkeer naar Zweinstein? Zou het iets te maken hebben met de oude profetie die Harry aan het elnd van zijn vijfde schooljaar gehoord heeft?
 Harrys zesde jaar op Zweinstein begint ongebruikelijk, als Voldemort opnieuw aan kracht wint en de werelden van Dreuzels en tovenaars zich steeds meer met elkaar vermengen...', '816905633-0', 496, 10.5);
+
+DROP TABLE IF EXISTS talen;
+CREATE TABLE talen (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  taal TEXT
+);

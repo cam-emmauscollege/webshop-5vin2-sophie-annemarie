@@ -45,3 +45,19 @@ CREATE TABLE talen (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   taal TEXT
 );
+
+
+
+DROP TABLE IF EXISTS schrijvers; 
+CREATE TABLE schrijvers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255),
+);
+
+insert into schrijvers (name) values ('JRR Tolkien')
+insert into schrijvers (name) values ('JK Rowling')
+insert into schrijvers (name) values ('Antoine de Saint - Exupéry')
+insert into schrijvers (name) values ('Cao Xueqin')
+insert into schrijvers (name) values ('CS Lewis')
+insert into schrijvers (name) values ('Carlo Collodi')
+insert into schrijvers (name) values ('Dan Brown')

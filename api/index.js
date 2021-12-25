@@ -70,10 +70,10 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.price, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft, genres.genre FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id = products.kaft JOIN genres ON genres.id = products.genre WHERE category_id = ? ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT * FROM products JOIN schrijvers ON schrijvers.id = products.schrijver_id JOIN talen ON talen.id = products.taal_id JOIN kaften ON kaften.id = products.kaft_id JOIN genres ON genres.id = products.genre_id WHERE category_id = ? ORDER BY name ASC')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT products.id, products.name, products.description, products.aantal_blz, products.price, schrijvers.name AS schrijvers_name, talen.taal, kaften.kaft, genres.genre FROM products JOIN schrijvers ON schrijvers.id = products.schrijver JOIN talen ON talen.id = products.taal JOIN kaften ON kaften.id JOIN genres ON genres.id = products.genre ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT * FROM products JOIN schrijvers ON schrijvers.id = products.schrijver_id JOIN talen ON talen.id = products.taal_id JOIN kaften ON kaften.id = products.kaft_id JOIN genres ON genres.id = products.genre_id ORDER BY name ASC')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))

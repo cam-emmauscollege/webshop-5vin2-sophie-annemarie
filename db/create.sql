@@ -63,6 +63,14 @@ In de Ligusterlaan zit Harry Potter laat op de avond ongeduldig op de komst van 
  Zweinstein? Zou het iets te maken hebben met de oude profetie die Harry aan het elnd van zijn vijfde schooljaar gehoord heeft?
 Harrys zesde jaar op Zweinstein begint ongebruikelijk, als Voldemort opnieuw aan kracht wint en de werelden van Dreuzels en tovenaars zich steeds meer met elkaar vermengen...', 2, 496, 10.5);
 
+DROP TABLE IF EXISTS talen;
+CREATE TABLE talen (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  taal TEXT
+);
+
+
+
 DROP TABLE IF EXISTS schrijvers; 
 CREATE TABLE schrijvers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,

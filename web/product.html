@@ -51,9 +51,12 @@
           <div class="card-body">
             <p class="product_description card-text"></p>
             <ul class="product-properties">
-            <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
-            <li><span class="propert-name">Code:</span><span class="product_code"></span></li>
-            <li><span class="propert-name">Blz:</span><span class="product_aantal_blz"></span></li>
+              <li><span class="propert-name">Prijs: </span><span class="product_price"></span></li>
+              <li><span class="propert-name">Schrijver: </span><span class="product_schrijver"></span></li>
+              <li><span class="propert-name">Blz: </span><span class="product_aantal_blz"></span></li>
+              <li><span class="propert-name">Genre: </span><span class="product_genre"></span></li>
+              <li><span class="propert-name">Taal: </span><span class="product_taal"></span></li>
+              <li><span class="propert-name">Kaft: </span><span class="product_kaft"></span></li>
             </ul>
             <input class="product_amount" type="number" value="1" min="1">
             <input class="product_id" type="hidden" name="id" data-json="">
@@ -87,11 +90,14 @@
                 clone.querySelector(".product_title").textContent += product.name
                 clone.querySelector(".product_description").textContent = product.description
                 clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
-                clone.querySelector(".product_code").textContent = product.code
+                clone.querySelector(".product_schrijver").textContent = product.schrijver
+			          clone.querySelector(".product_genre").textContent = product.genre
+			          clone.querySelector(".product_taal").textContent = product.taal
+			          clone.querySelector(".product_kaft").textContent = product.kaft
                 clone.querySelector(".product_aantal_blz").textContent = product.aantal_blz
                 clone.querySelector(".product_id").value = product.id
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
-                clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
+                clone.querySelector(".product_image").src =`/images/${product.product_id}.jpg`
 
                 container.appendChild(clone)
             } else {

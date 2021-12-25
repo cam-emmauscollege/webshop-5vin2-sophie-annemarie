@@ -82,11 +82,11 @@ function getProducts(request, response) {
 }
 
 function getProductById(request, response) {
-  console.log('API ontvangt /api/products/:id/?', request.query)
+  console.log('API ontvangt /api/products/:product_id/?', request.query)
 
   let data = []
   const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT * FROM products WHERE id = ?')
+  const sqlOpdracht = db.prepare('SELECT * FROM products WHERE product_id = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }

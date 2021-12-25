@@ -90,7 +90,7 @@ Harrys zesde jaar op Zweinstein begint ongebruikelijk, als Voldemort opnieuw aan
 
 insert into schrijvers (schrijver) values ('JRR Tolkien');
 insert into schrijvers (schrijver) values ('JK Rowling');
-insert into schrijvers (schrijver) values ('Antoine de Saint - Exupéry');
+insert into schrijvers (schrijver) values ('Antoine de Saint');
 insert into schrijvers (schrijver) values ('Cao Xueqin');
 insert into schrijvers (schrijver) values ('CS Lewis');
 insert into schrijvers (schrijver) values ('Carlo Collodi');

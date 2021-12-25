@@ -17,7 +17,7 @@ CREATE TABLE products (
 DROP TABLE IF EXISTS schrijvers; 
 CREATE TABLE schrijvers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(255),
+  name VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS talen;
@@ -81,12 +81,6 @@ In de Ligusterlaan zit Harry Potter laat op de avond ongeduldig op de komst van 
  Zweinstein? Zou het iets te maken hebben met de oude profetie die Harry aan het elnd van zijn vijfde schooljaar gehoord heeft?
 Harrys zesde jaar op Zweinstein begint ongebruikelijk, als Voldemort opnieuw aan kracht wint en de werelden van Dreuzels en tovenaars zich steeds meer met elkaar vermengen...', 2, 1, 496, 2, 10.5);
 
-insert into talen (taal) values ('Nederlands');
-insert into talen (taal) values ('Frans');
-
-insert into kaften (kaft) values ('Paperback');
-insert into kaften (kaft) values ('Hardcover');
-
 insert into schrijvers (name) values ('JRR Tolkien');
 insert into schrijvers (name) values ('JK Rowling');
 insert into schrijvers (name) values ('Antoine de Saint - Exupéry');
@@ -94,3 +88,10 @@ insert into schrijvers (name) values ('Cao Xueqin');
 insert into schrijvers (name) values ('CS Lewis');
 insert into schrijvers (name) values ('Carlo Collodi');
 insert into schrijvers (name) values ('Dan Brown');
+
+insert into talen (taal) values ('Nederlands');
+insert into talen (taal) values ('Frans');
+
+insert into kaften (kaft) values ('Paperback');
+insert into kaften (kaft) values ('Hardcover');
+

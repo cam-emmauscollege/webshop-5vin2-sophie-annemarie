@@ -24,19 +24,19 @@ CREATE TABLE schrijvers (
 DROP TABLE IF EXISTS talen;
 CREATE TABLE talen (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  taal TEXT
+  taal VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS kaften;
 CREATE TABLE kaften (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  kaft TEXT
+  kaft VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS genres;
 CREATE TABLE genres (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  genre TEXT
+  genre VARCHAR(255)
 );
 --
 -- populate with data

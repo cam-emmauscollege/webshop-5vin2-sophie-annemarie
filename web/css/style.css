@@ -13,6 +13,14 @@ footer {
     z-index:0;
 }
 
+#header {
+  margin-top: 20px;
+}
+
+#text {
+  margin-bottom: 30px;
+}
+
 .shop-button {
   font-size: 15px;
   margin-top: -4px;

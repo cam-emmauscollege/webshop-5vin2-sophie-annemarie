@@ -132,7 +132,7 @@
 			  clone.querySelector(".product_taal").textContent = product.taal
 			  clone.querySelector(".product_kaft").textContent = product.kaft
 			  clone.querySelector(".product_aantal_blz").textContent = product.aantal_blz
-              clone.querySelector(".product_id").value = product.id
+              clone.querySelector(".product_id").value = product.product_id
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.product_id}.jpg`
               container.appendChild(clone)

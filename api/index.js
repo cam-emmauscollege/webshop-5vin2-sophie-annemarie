@@ -82,7 +82,7 @@ function getProducts(request, response) {
 }
 
 function getProductById(request, response) {
-  console.log('API ontvangt /api/products/:product_id/?', request.query)
+  console.log('API ontvangt /api/products/:id/?', request.query)
 
   let data = []
   const product_id = parseInt(request.params.id)
